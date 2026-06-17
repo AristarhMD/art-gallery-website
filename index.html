@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="assets/logo-light.svg" />
+    <title>Art Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-grey-900: #151515;
+        --color-grey-700: #444444;
+        --color-white: #ffffff;
+        --color-gold-500: #d5966c;
+        --font-big-shoulders: "Big Shoulders", sans-serif;
+        --font-outfit: "Outfit", sans-serif;
+      }
+
+      @utility preset-1 {
+        @apply font-big-shoulders font-black text-8xl leading-[90%];
+      }
+
+      @utility preset-1-table {
+        @apply font-big-shoulders font-black text-[4.375rem] leading-[90%];
+      }
+
+      @utility preset-1-mobile {
+        @apply font-big-shoulders font-black text-6xl leading-[90%];
+      }
+
+      @utility preset-2 {
+        @apply font-big-shoulders font-black text-[4.375rem] leading-[100%];
+      }
+
+      @utility preset-2-tablet {
+        @apply font-big-shoulders font-black text-[3.437rem] leading-[90%];
+      }
+
+      @utility preset-3 {
+        @apply font-big-shoulders font-black text-6xl leading-[100%];
+      }
+
+      @utility preset-3-tablet {
+        @apply font-big-shoulders font-black text-[3.125rem] leading-[90%];
+      }
+
+      @utility preset-4 {
+        @apply font-big-shoulders font-black text-4xl leading-[100%];
+      }
+
+      @utility preset-5 {
+        @apply font-outfit font-light text-[1.375rem] leading-[140%];
+      }
+
+      @utility preset-6 {
+        @apply font-big-shoulders font-extrabold text-xl leading-[100%] tracking-[3.64px];
+      }
+
+      @utility preset-7 {
+        @apply font-outfit font-light text-lg leading-[140%];
+      }
+
+      @utility btn-primary {
+        @apply bg-grey-900 preset-6 text-white cursor-pointer outline-none;
+        @apply hover:bg-gold-500;
+        @apply focus:ring-4 ring-offset-3 ring-gold-500;
+      }
+
+      @utility btn-text {
+        @apply px-8 py-6;
+      }
+
+      @utility btn-span {
+        @apply p-6 bg-gold-500;
+        @apply group-hover:bg-grey-900;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
+  <body class="min-h-screen">
+    <div class="w-full flex flex-col items-center gap-25 md:gap-30 xl:gap-45">
+      <header class="w-full md:relative xl:flex xl:w-[69%] xl:mr-auto">
+        <div class="hidden xl:block basis-112.5 bg-grey-900 relative">
+          <img
+            src="assets/logo-light.svg"
+            alt="Company Logo"
+            class="absolute w-128.5 h-43 top-47.25 -right-[37%]"
+          />
+        </div>
+        <div class="mb-8 md:mb-0 xl:relative xl:overflow-x-hidden">
+          <picture>
+            <source
+              media="(min-width:1220px )"
+              srcset="assets/desktop/image-hero.jpg"
+            />
+            <source
+              media="(min-width:768px )"
+              srcset="assets/tablet/image-hero.jpg"
+            />
+            <img src="assets/mobile/image-hero.jpg" alt="hero img" />
+          </picture>
+
+          <img
+            class="hidden xl:block w-128.5 h-43 xl:absolute xl:top-47.25 xl:-left-[60%]"
+            src="assets/logo-dark.svg"
+            alt="Company Logo"
+          />
+        </div>
+        <div
+          class="mx-auto flex flex-col gap-8 md:gap-12 xl:gap-16 items-start w-85.75 md:absolute md:bottom-1/2 md:translate-y-1/2 md:right-10 xl:right-auto xl:left-[57.5rem]"
+        >
+          <img
+            class="w-70 md:w-full xl:hidden"
+            src="assets/logo-dark.svg"
+            alt="Logo of the company"
+          />
+          <p class="preset-7 text-grey-700 xl:preset-5">
+            The arts in the collection of the Modern Art Gallery all started
+            from a spark of inspiration. Will these pieces inspire you? Visit us
+            and find out.
+          </p>
+          <a class="group btn-primary flex items-center" href="./location.html">
+            <span class="btn-text">OUR LOCATION</span>
+            <span class="btn-span">
+              <svg width="10" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="#FFF" fill="none" d="m1 0 8 12-8 12" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </header>
+
+      <main
+        class="w-[91.46%] md:w-[89.71%] xl:w-[77%] xl:max-w-300 grid grid-cols-1 md:grid-cols-[2fr_minmax(280px,445px)] md:grid-rows-[auto_313px_auto] gap-y-8 md:gap-3 xl:gap-8"
+      >
+        <article
+          class="flex flex-col md:flex-row gap-6 md:gap-0 md:justify-between md:items-center md:col-span-2"
+        >
+          <div class="md:order-2">
+            <picture>
+              <source
+                media="(min-width:1220px )"
+                srcset="assets/desktop/image-grid-1.jpg"
+              />
+              <source
+                media="(min-width:768px )"
+                srcset="assets/tablet/image-grid-1.jpg"
+              />
+              <img
+                src="assets/mobile/image-grid-1.jpg"
+                alt="photo from the gallery"
+              />
+            </picture>
+          </div>
+
+          <div class="md:order-1 md:basis-56 md:basis-65">
+            <p class="preset-3-tablet text-grey-900 uppercase mb-6">
+              Your Day <span class="block md:inline">at the Gallery</span>
+            </p>
+            <p class="preset-7 text-grey-700">
+              Wander through our distinct collections and find new insights
+              about our artists. Dive into the details of their creative
+              process.
+            </p>
+          </div>
+        </article>
+
+        <article class="md:row-span-2">
+          <picture>
+            <source
+              media="(min-width:1220px )"
+              srcset="assets/desktop/image-grid-2.jpg"
+            />
+            <source
+              media="(min-width:768px )"
+              srcset="assets/tablet/image-grid-2.jpg"
+            />
+            <img
+              src="assets/mobile/image-grid-2.jpg"
+              alt="photo from the gallery"
+              class="w-full md:min-w-[398px] md:h-180"
+            />
+          </picture>
+        </article>
+
+        <article>
+          <picture>
+            <source
+              media="(min-width:1220px)"
+              srcset="assets/desktop/image-grid-3@2x.jpg"
+            />
+            <source
+              media="(min-width:768px)"
+              srcset="assets/tablet/image-grid-3@2x.jpg"
+            />
+            <img
+              src="assets/mobile/image-grid-3.jpg"
+              alt="photo from the gallery"
+              class="w-full md:min-w-70 md:h-78.25"
+            />
+          </picture>
+        </article>
+
+        <article
+          class="py-12 px-6 md:py-20 md:px-8 xl:py-16 xl:px-12 bg-grey-900"
+        >
+          <p class="preset-3-tablet text-white mb-6">COME & BE INSPIRED</p>
+          <p class="preset-7 xl:preset-5 text-white">
+            We’re excited to welcome you to our gallery and see how our
+            collections influence you.
+          </p>
+        </article>
+      </main>
+
+      <footer class="w-full bg-grey-900 py-12 px-10 xl:py-20 xl:px-41.25">
+        <section
+          class="flex flex-col md:flex-row md:justify-between md:items-start gap-10"
+        >
+          <div
+            class="flex flex-col md:flex-row gap-10 md:gap-16 md:basis-112.5 xl:gap-0 xl:basis-182.5 xl:grow-0 xl:justify-between"
+          >
+            <img
+              class="w-27.5 h-10 xl:w-40 xl:h-14.5"
+              src="assets/logo-light.svg"
+              alt="Logo of the company"
+            />
+
+            <p class="preset-7 text-white xl:basis-107.5">
+              The Modern Art Gallery is free to all visitors and open seven days
+              a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
+            </p>
+          </div>
+          <ul class="flex items-center gap-5">
+            <li class="group">
+              <a
+                class="block outline-none focus:ring-2 focus:ring-offset-2 ring-gold-500 ring-offset-grey-900"
+                href="#"
+                ><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    class="group-hover:fill-gold-500"
+                    d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0Z"
+                    fill="#FFF"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="group">
+              <a
+                href="#"
+                class="block outline-none focus:ring-2 focus:ring-offset-2 ring-gold-500 ring-offset-grey-900"
+                ><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    class="group-hover:fill-gold-500"
+                    d="M10 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.975 1.409 4.099 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.057 4.042-.124 2.687-1.387 3.975-4.1 4.099-1.054.048-1.37.058-4.041.058-2.67 0-2.987-.01-4.04-.058-2.718-.124-3.977-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058ZM10 0C7.284 0 6.944.012 5.877.06 2.246.227.227 2.242.061 5.877.01 6.944 0 7.284 0 10s.012 3.057.06 4.123c.167 3.632 2.182 5.65 5.817 5.817 1.067.048 1.407.06 4.123.06s3.057-.012 4.123-.06c3.629-.167 5.652-2.182 5.816-5.817.05-1.066.061-1.407.061-4.123s-.012-3.056-.06-4.122C19.777 2.249 17.76.228 14.124.06 13.057.01 12.716 0 10 0Zm0 4.865a5.135 5.135 0 1 0 0 10.27 5.135 5.135 0 0 0 0-10.27Zm0 8.468a3.333 3.333 0 1 1 0-6.666 3.333 3.333 0 0 1 0 6.666Zm5.338-9.87a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z"
+                    fill="#FFF"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="group">
+              <a
+                href="#"
+                class="block outline-none focus:ring-2 focus:ring-offset-2 ring-gold-500 ring-offset-grey-900"
+                ><svg width="20" height="17" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    class="group-hover:fill-gold-500"
+                    d="M20 2.172a8.192 8.192 0 0 1-2.357.646 4.11 4.11 0 0 0 1.805-2.27 8.22 8.22 0 0 1-2.606.996A4.096 4.096 0 0 0 13.847.248c-2.65 0-4.596 2.472-3.998 5.037A11.648 11.648 0 0 1 1.392 1a4.109 4.109 0 0 0 1.27 5.478 4.086 4.086 0 0 1-1.858-.513c-.045 1.9 1.318 3.679 3.291 4.075a4.113 4.113 0 0 1-1.853.07 4.106 4.106 0 0 0 3.833 2.849A8.25 8.25 0 0 1 0 14.658a11.616 11.616 0 0 0 6.29 1.843c7.618 0 11.923-6.434 11.663-12.205A8.354 8.354 0 0 0 20 2.172Z"
+                    fill="#FFF"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>
